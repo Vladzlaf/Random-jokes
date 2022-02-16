@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body {
+    background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+    color: #0f141e;
+    animation: gradient 10s ease infinite;
+    background-size: 200%;
+    font-family: 'Staatliches', cursive;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a {
+    color: rgb(80, 51, 107);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(76, 126, 173);
+}
+
+.header-container {
+    max-height: 90px;
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+
+.text {
+    font-size: 30px;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chuck {
+    display: block;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+/* .button-type {
+    min-height: 50px;
+    background-color: rgb(190, 142, 235);
+    font-family: 'Staatliches', cursive;
+    font-size: 2em;
+    border-radius: 12px;
+    border: 0;
+    margin-top: 10px;
+    color:#ca5961;
+    transition: 0.5s;
+}
+
+.button-type:hover {
+    color: white;
+} */
+
+.bubbly-button {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ff0081;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.bubbly-button:focus {
+    outline: 0;
+}
+
+.bubbly-button:before,
+.bubbly-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.bubbly-button:active {
+    transform: scale(0.9);
+    background-color: #e60074;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.logo-footer {
+    height: 60px;
+    width: 140px;
+    padding-right: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 20px;
+}
+
+.info-item {
+    padding-left: 25px;
+}
+
+.info-item:first-child {
+    padding: 0;
+    margin-left: 40px;
+}
+
+.text-chuck {
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+.explosion {
+    animation: change ease 0.8s;
+    background-image: url(./assets/png/1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes change {
+    0% {
+        background-size: 5%;
+    }
+    50% {
+        background-size: 35%;
+    }
+    100% {
+        background-size: 0%;
+    }
+}
+
+.shadow {
+    animation: shadow 1s ease-in;
+}
+
+@keyframes shadow {
+    0% {
+        text-shadow: 0 0 0 #000303;
+    }
+    50% {
+        text-shadow:0 50px 60px transparent;
+    }
+    100% {
+        text-shadow:0 0 0 transparent;
+    }
+}
+
+.hero {
+animation: shake ease 0.8s;
+}
+
+@keyframes shake {
+    2% {
+    transform: translate(10px, -5px) rotate(-0.5deg); }
+    4% {
+    transform: translate(4px, 1px) rotate(0.5deg); }
+    16% {
+    transform: translate(8px, 7px) rotate(3.5deg); }
+    18% {
+    transform: translate(-8px, -3px) rotate(0.5deg); }
+    20% {
+    transform: translate(2px, -7px) rotate(-2.5deg); }
+    22% {
+    transform: translate(6px, 1px) rotate(-1.5deg); }
+    24% {
+    transform: translate(-1px, -3px) rotate(-1.5deg); }
+    36% {
+    transform: translate(-5px, 8px) rotate(1.5deg); }
+    38% {
+    transform: translate(8px, 5px) rotate(3.5deg); }
+    40% {
+    transform: translate(10px, 2px) rotate(-1.5deg); }
+    42% {
+    transform: translate(0px, -1px) rotate(-2.5deg); }
+    44% {
+    transform: translate(-3px, -6px) rotate(0.5deg); }
+    46% {
+    transform: translate(0px, -6px) rotate(-2.5deg); }
+    48% {
+    transform: translate(6px, 6px) rotate(-2.5deg); }
+    50% {
+    transform: translate(-3px, 9px) rotate(-0.5deg); }
+    64% {
+    transform: translate(8px, -2px) rotate(3.5deg); }
+    66% {
+    transform: translate(8px, -3px) rotate(1.5deg); }
+    68% {
+    transform: translate(4px, 5px) rotate(2.5deg); }
+    86% {
+    transform: translate(3px, 5px) rotate(-0.5deg); }
+    88% {
+    transform: translate(6px, -4px) rotate(3.5deg); }
+    90% {
+    transform: translate(-8px, 3px) rotate(-0.5deg); }
+    92% {
+    transform: translate(-5px, 3px) rotate(-2.5deg); }
+    94% {
+    transform: translate(10px, 2px) rotate(1.5deg); }
+    96% {
+    transform: translate(-8px, 6px) rotate(-2.5deg); }
+    98% {
+    transform: translate(10px, 9px) rotate(1.5deg); }
+    0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
