@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 body {
-    background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(135deg, #FBAB7E, #F7CE68);
     color: #0f141e;
     animation: gradient 10s ease infinite;
     background-size: 200%;
@@ -23,13 +23,13 @@ body {
 }
 
 a {
-    color: rgb(80, 51, 107);
+    color: rgba(248, 248, 248, 0.719);
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: rgb(76, 126, 173);
+    color: rgb(226, 125, 31);
 }
 
 .header-container {
@@ -49,6 +49,13 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.back {
+    background-image: url(./assets/png/2.svg);
+    background-size: 30% ;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .chuck {
@@ -82,14 +89,14 @@ a:hover {
     margin-bottom: 15px;
     -webkit-appearance: none;
     appearance: none;
-    background-color: #ff0081;
+    background-color: #e79f31;
     color: #fff;
     border-radius: 12px;
     border: none;
     cursor: pointer;
     position: relative;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    box-shadow: 0 2px 25px rgba(202, 169, 21, 0.5);
     font-size: 23px;
     text-transform: uppercase;
 }
@@ -114,20 +121,20 @@ a:hover {
 .bubbly-button:before {
     display: none;
     top: -75%;
-    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-image: radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, transparent 20%, #e79f31 20%, transparent 30%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, transparent 10%, #e79f31 15%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%);
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
 }
 
 .bubbly-button:after {
     display: none;
     bottom: -75%;
-    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-image: radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, transparent 10%, #e79f31 15%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%), radial-gradient(circle, #e79f31 20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
 
 .bubbly-button:active {
     transform: scale(0.9);
-    background-color: #e60074;
+    background-color: #e79f31;
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 
@@ -139,6 +146,10 @@ a:hover {
 .bubbly-button.animate:after {
     display: block;
     animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+.bubbly-button:hover {
+    color: rgba(255, 255, 255, 0.623);
 }
 
 @keyframes topBubbles {
@@ -210,7 +221,8 @@ a:hover {
     background-image: url(./assets/png/1.png);
     background-position: center;
     background-repeat: no-repeat;
-}
+    background-size: 0;
+    background-position: 50%;}
 
 @keyframes change {
     0% {
