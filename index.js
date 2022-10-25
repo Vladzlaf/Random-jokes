@@ -19,7 +19,7 @@ var animateButton = function(e) {
 
 //======================Jokes-content=====================
 
-const url = 'https://api.icndb.com/jokes/random'
+const url = 'https://api.chucknorris.io/jokes/random'
 const text = document.querySelector ('.text-chuck')
 const button = document.querySelector ('.bubbly-button')
 const explosion = document.querySelector ('.main-container')
@@ -36,7 +36,7 @@ getData()
 button.addEventListener('click', getData)
 
 function showData(data) {
-    text.textContent = data.value.joke.replace(/&quot;/g, "''");
+    text.textContent = data.value.replace(/&quot;/g, "''");
 }
 
 function showEffects() {
