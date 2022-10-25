@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
 body {
     background: linear-gradient(135deg, #FBAB7E, #F7CE68);
     color: #0f141e;
@@ -32,6 +39,10 @@ a:hover {
     color: rgb(226, 125, 31);
 }
 
+.content {
+    width: 80%;
+}
+
 .header-container {
     max-height: 90px;
     display: flex;
@@ -44,19 +55,30 @@ a:hover {
     margin: 0;
 }
 
+
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 7%;
 }
 
-.back {
+main {
+    height: 78%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+/* .back {
     background-image: url(./assets/png/2.svg);
     background-size: 30% ;
     background-repeat: no-repeat;
     background-position: center;
-}
+} */
 
 .chuck {
     display: block;
@@ -99,7 +121,14 @@ a:hover {
     box-shadow: 0 2px 25px rgba(202, 169, 21, 0.5);
     font-size: 23px;
     text-transform: uppercase;
-     transition: 0.3s;
+    transition: 0.3s
+}
+
+@media screen and (max-width: 501px){
+    .bubbly-button {
+        padding: 5% 7%;
+
+    }
 }
 
 .bubbly-button:focus {
@@ -217,23 +246,32 @@ a:hover {
     text-align: center;
 }
 
+@media screen and (max-width: 501px){
+    .text-chuck {
+        font-size: 15px;
+    }
+}
+
+
 .explosion {
     animation: change ease 0.8s;
     background-image: url(./assets/png/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 0;
-    background-position: 50%;}
+    background-position: 50%;
+
+}
 
 @keyframes change {
     0% {
-        background-size: 5%;
+        background-size: 1vh;
     }
     50% {
-        background-size: 35%;
+        background-size: 50vh;
     }
     100% {
-        background-size: 0%;
+        background-size: 0vh;
     }
 }
 
